@@ -21,3 +21,12 @@ welcomeUser();
 let currentYear = new Date().getFullYear();
 
 document.getElementById("year").textContent = currentYear;
+// Back to Top Button
+const backToTopButton = document.getElementById("backToTop");
+
+backToTopButton.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
