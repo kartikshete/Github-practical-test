@@ -16,3 +16,8 @@ function welcomeUser() {
 }
 
 welcomeUser();
+// Display Current Year
+
+let currentYear = new Date().getFullYear();
+
+document.getElementById("year").textContent = currentYear;
