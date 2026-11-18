@@ -117,3 +117,29 @@ if (phoneInput) {
     });
 
 }
+
+const themeToggle = document.querySelector("#themeToggle");
+
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+    document.body.classList.toggle("dark-mode", savedTheme === "dark");
+}
+
+// Toggle Theme
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        const currentTheme = document.body.classList.contains("dark-mode")
+            ? "dark"
+            : "light";
+
+        localStorage.setItem("theme", currentTheme);
+
+    });
+
+}
