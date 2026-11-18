@@ -79,3 +79,41 @@ if (contactForm) {
     });
 
 }
+
+
+const emailInput = document.querySelector("#email");
+
+if (emailInput) {
+
+    emailInput.addEventListener("input", function () {
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailPattern.test(emailInput.value)) {
+            emailInput.style.borderColor = "green";
+        } else {
+            emailInput.style.borderColor = "red";
+        }
+
+    });
+
+}
+
+// Phone Number Validation
+const phoneInput = document.querySelector("#phone");
+
+if (phoneInput) {
+
+    phoneInput.addEventListener("input", function () {
+
+        const phonePattern = /^[0-9]{10}$/;
+
+        if (phonePattern.test(phoneInput.value)) {
+            phoneInput.style.borderColor = "green";
+        } else {
+            phoneInput.style.borderColor = "red";
+        }
+
+    });
+
+}
