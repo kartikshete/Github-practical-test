@@ -30,9 +30,6 @@ backToTopButton.addEventListener("click", function () {
         behavior: "smooth"
     });
 });
-// ===============================
-// PART 5: SMOOTH SCROLLING
-// ===============================
 
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
@@ -56,3 +53,29 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     });
 
 });
+
+
+const contactForm = document.querySelector("#contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.querySelector("#name").value.trim();
+        const email = document.querySelector("#email").value.trim();
+        const message = document.querySelector("#message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill all the fields!");
+            return;
+        }
+
+        alert(`Thank you ${name}! Your message has been received.`);
+
+        contactForm.reset();
+
+    });
+
+}
