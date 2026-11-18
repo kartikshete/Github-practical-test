@@ -3,9 +3,13 @@ GitHub Practical Test
 Student Details
 
 Full Name	Kartik Laxman Shete
+
 URN Number	E25B031534
+
 Semester	3
+
 Section	A
+
 Subject	Git and GitHub
 
 Project Description
